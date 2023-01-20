@@ -2,6 +2,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  mode: 'jit',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -11,7 +12,13 @@ module.exports = {
       "sublima": ["Sublima", "sans-serif"],
       sans: ["Inter", ...defaultTheme.fontFamily.sans]
     },
-    extend: {},
+    extend: {
+      colors: {
+        'neon-pink': '#E766DA',
+        'primary': '#5B5B5B',
+        'dark': '#212121'
+      },
+    },
   },
   plugins: [],
 }
